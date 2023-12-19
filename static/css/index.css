@@ -1,0 +1,148 @@
+body, html {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background-color: aliceblue;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+/* nav панель */
+nav {
+    background-color: black;
+    display: flex;
+}
+
+.nav-link {
+    margin: auto;
+}
+
+.left, .right, .lang {
+    display: flex;
+}
+
+.right {
+    margin-left: auto;
+}
+
+@media (min-width: 1001px) {
+    .nav-link>a {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .left, .right, .lang {
+        height: 50px;
+    }
+}
+@media (max-width: 1000px) {
+    .nav-link>a {
+        padding: 50px;
+        font-size: 30px;
+    }
+
+    .left, .right, .lang {
+        height: 75px;
+    }
+}
+
+/* block's */
+.block {
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.27);
+    width: 80%;
+    text-align: center;
+}
+
+@media (min-width: 1001px) {
+    .block {
+        margin-top: 20px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .block {
+        margin-top: 30px;
+        border-radius: 15px;
+        font-size: 30px;
+    }
+}
+
+/* статистика */
+.statistic {
+    display: flex;
+    margin: auto;
+}
+
+.stat__per_sent {
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.stat__descript {
+    display: flex;
+}
+
+.pos {
+    margin-left: auto;
+}
+
+@media (min-width: 1001px) {
+    .stat__per_sent {
+        width: 45vh;
+        height: 45vh;
+    }
+
+    .stat__descript {
+        margin-top: 10px;
+    }
+
+    .pos {
+        margin-right: 20px;
+    }
+
+    .stat {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+    }
+
+    .stat__descript>.per__sent {
+        width: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .stat__per_sent {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    .stat__descript {
+        margin-top: 10px;
+    }
+
+    .pos {
+        margin-right: 20px;
+    }
+
+    .stat {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+    }
+
+    .stat__descript>.per__sent {
+        width: 80px;
+    }
+}

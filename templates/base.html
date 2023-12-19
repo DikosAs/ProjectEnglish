@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="{% block page_lang %}{% endblock %}">
+<head>
+    <meta charset="UTF-8">
+    <title>English Project</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="left">
+
+        </div>
+        <div class="right">
+            <div class="lang">
+                <div class="nav-link" id="ru"><a href="{% url 'ru_index' %}">Rus</a></div>
+                <div class="nav-link" id="en"><a href="{% url 'en_index' %}">Eng</a></div>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block script %}
+        
+    {% endblock %}
+    <script>
+        fetch(url, {
+          method: "get",
+          headers: new Headers({
+            "ngrok-skip-browser-warning": "69420",
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((err) => console.log(err));
+    </script>
+</body>
+</html>

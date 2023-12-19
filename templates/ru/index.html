@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="{% block page_lang %}ru{% endblock %}">
+<head>
+    {% block title %}Ru{% endblock %}
+</head>
+<body>
+    {% block content %}
+    {% if content != None %}
+        <div class="block" id="tv">
+            <wbr>
+            <p>{{ content.ru_tv_text }}</p>
+            <wbr>
+        </div>
+        <div class="block" id="statistic">
+                <wbr>
+                <div class="statistic">
+                    <div class="stat__per_sent" style="background: conic-gradient(
+                            #0022ff {{ content.tv_statistic }}%,
+                            red 0deg {{ content.newspaper_statistic }}%,
+                            orange 0deg {{ content.radio_statistic }}%,
+                            #8400ff 0deg {{ content.internet_statistic }}%,
+                            chartreuse 0deg {{ content.friend_statistic }}%
+                            );"></div>
+                    <div class="pos">
+                        <div class="stat__descript">
+                            <div class="stat" style="background-color: #0022ff"></div>
+                            <div class="per__sent">{{ content.tv_statistic }}%</div>
+                            <p>Телевизор</p>
+                        </div>
+                        <div class="stat__descript">
+                            <div class="stat" style="background-color: red"></div>
+                            <div class="per__sent">{{ content.newspaper_statistic }}%</div>
+                            <p>Газета</p>
+                        </div>
+                        <div class="stat__descript">
+                            <div class="stat" style="background-color: orange"></div>
+                            <div class="per__sent">{{ content.radio_statistic }}%</div>
+                            <p>Радио</p>
+                        </div>
+                        <div class="stat__descript">
+                            <div class="stat" style="background-color: #8400ff"></div>
+                            <div class="per__sent">{{ content.internet_statistic }}%</div>
+                            <p>Интернет</p>
+                        </div>
+                        <div class="stat__descript">
+                            <div class="stat" style="background-color: chartreuse"></div>
+                            <div class="per__sent">{{ content.friend_statistic }}%</div>
+                            <p>Слухи</p>
+                        </div>
+                    </div>
+                </div>
+                <wbr>
+        </div>
+    {% endif %}
+    {% endblock %}
+
+    {% block script %}
+        <script>
+            document.querySelector('div.nav-link#ru>a').textContent = 'Рус'
+            document.querySelector('div.nav-link#en>a').textContent = 'Анг'
+        </script>
+    {% endblock %}
+</body>
+</html>
