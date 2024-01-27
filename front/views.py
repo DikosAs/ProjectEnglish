@@ -23,3 +23,7 @@ def ru_index(request: WSGIRequest):
 
 def en_index(request: WSGIRequest):
     return render(request, 'en/index.html', {'content': get_data()})
+
+
+def ssl_auth(request: WSGIRequest):
+    return render(request, 'ssl/7014A47370A46826C34B32728BCC3723.txt')

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-g2q=qkjz1)kmo37a@xtz__pz(v(-3e%en)6hzo^a9krigl0mrt
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['http://192.168.0.30', 'https://192.168.0.30']
+CSRF_TRUSTED_ORIGINS = ['http://hamster-cool-labrador.ngrok-free.app', 'https://hamster-cool-labrador.ngrok-free.app']
 
 # Application definition
 

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 <!DOCTYPE html>
-<html lang="{% block page_lang %}en{% endblock %}">
+<html lang="{% block page_lang %}ru{% endblock %}">
 <head>
     {% block title %}En{% endblock %}
 </head>
@@ -14,44 +14,46 @@
             <wbr>
         </div>
         <div class="block" id="statistic">
-                <wbr>
-                <div class="statistic">
-                    <div class="stat__per_sent" style="background: conic-gradient(
-                            #0022ff {{ content.tv_statistic }}%,
-                            red 0deg {{ content.newspaper_statistic }}%,
-                            orange 0deg {{ content.radio_statistic }}%,
-                            #8400ff 0deg {{ content.internet_statistic }}%,
-                            chartreuse 0deg {{ content.friend_statistic }}%
-                            );"></div>
-                    <div class="pos">
-                        <div class="stat__descript">
-                            <div class="stat" style="background-color: #0022ff"></div>
-                            <div class="per__sent">{{ content.tv_statistic }}%</div>
-                            <p>TV</p>
-                        </div>
-                        <div class="stat__descript">
-                            <div class="stat" style="background-color: red"></div>
-                            <div class="per__sent">{{ content.newspaper_statistic }}%</div>
-                            <p>Newspapers</p>
-                        </div>
-                        <div class="stat__descript">
-                            <div class="stat" style="background-color: orange"></div>
-                            <div class="per__sent">{{ content.radio_statistic }}%</div>
-                            <p>Radio</p>
-                        </div>
-                        <div class="stat__descript">
-                            <div class="stat" style="background-color: #8400ff"></div>
-                            <div class="per__sent">{{ content.internet_statistic }}%</div>
-                            <p>Internet</p>
-                        </div>
-                        <div class="stat__descript">
-                            <div class="stat" style="background-color: chartreuse"></div>
-                            <div class="per__sent">{{ content.friend_statistic }}%</div>
-                            <p>Rumors</p>
-                        </div>
+            <wbr>
+            <p>{{ content.en_statistic_text }}</p>
+            <wbr>
+            <div class="statistic">
+                <div class="stat__per_sent" style="background: conic-gradient(
+                        #0022ff {{ content.tv_statistic }}%,
+                        red 0deg {{ content.newspaper_statistic }}%,
+                        orange 0deg {{ content.radio_statistic }}%,
+                        #8400ff 0deg {{ content.internet_statistic }}%,
+                        chartreuse 0deg {{ content.friend_statistic }}%
+                        );"></div>
+                <div class="pos">
+                    <div class="stat__descript">
+                        <div class="stat" style="background-color: #0022ff"></div>
+                        <div class="per__sent">{{ content.tv_statistic }}%</div>
+                        <p>TV</p>
+                    </div>
+                    <div class="stat__descript">
+                        <div class="stat" style="background-color: red"></div>
+                        <div class="per__sent">{{ content.newspaper_statistic }}%</div>
+                        <p>Newspapers</p>
+                    </div>
+                    <div class="stat__descript">
+                        <div class="stat" style="background-color: orange"></div>
+                        <div class="per__sent">{{ content.radio_statistic }}%</div>
+                        <p>Radio</p>
+                    </div>
+                    <div class="stat__descript">
+                        <div class="stat" style="background-color: #8400ff"></div>
+                        <div class="per__sent">{{ content.internet_statistic }}%</div>
+                        <p>Internet</p>
+                    </div>
+                    <div class="stat__descript">
+                        <div class="stat" style="background-color: chartreuse"></div>
+                        <div class="per__sent">{{ content.friend_statistic }}%</div>
+                        <p>Rumors</p>
                     </div>
                 </div>
-                <wbr>
+            </div>
+            <wbr>
         </div>
     {% endif %}
     {% endblock %}
